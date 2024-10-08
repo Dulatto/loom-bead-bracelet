@@ -18,18 +18,22 @@ import './styles/app.css';
 function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/designer" element={<BraceletDesigner />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/profile" element={<UserProfile />} />
-      </Routes>
-      <Footer />
+      <div className="app">
+        <Header />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/designer" element={<BraceletDesigner />} />
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/profile" element={<UserProfile />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
 
   );

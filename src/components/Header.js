@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faUser, faStar } from '@fortawesome/free-solid-svg-icons';
+
 import '../styles/header.css';
 
 function Header() {

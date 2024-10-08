@@ -1,10 +1,8 @@
 .footer {
-    background-color: white;
-    border-top: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+    background-color: #f8f9fa; /* Цвет фона футера */
+    padding: 1rem; /* Внутренние отступы */
+    text-align: center; /* Центрировать текст */
 }
-
 .footer p {
     margin: 0;
     font-size: 0.9rem;

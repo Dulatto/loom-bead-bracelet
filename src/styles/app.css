@@ -36,3 +36,25 @@ p {
 .cta-button:hover {
     background-color: #333;
 }
+
+html,
+body {
+    height: 100%; /* Задать высоту 100% для html и body */
+    margin: 0; /* Убрать отступы */
+}
+
+.app {
+    display: flex; /* Сделать основной контейнер Flex-контейнером */
+    flex-direction: column; /* Вертикальная ориентация */
+    min-height: 100vh; /* Минимальная высота 100vh для заполнения всей высоты окна */
+}
+
+.content {
+    flex: 1; /* Контент будет занимать всё доступное пространство */
+}
+
+.footer {
+    background-color: #f8f9fa; /* Цвет фона для футера */
+    padding: 1rem; /* Внутренние отступы для футера */
+    text-align: center; /* Центрировать текст */
+}

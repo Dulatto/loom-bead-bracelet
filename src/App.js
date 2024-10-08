@@ -11,6 +11,7 @@ import UserProfile from './components/UserProfile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './styles/app.css';
 
 

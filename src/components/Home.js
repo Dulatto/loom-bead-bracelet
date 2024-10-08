@@ -8,7 +8,6 @@ function Home() {
             <div className='text-center mb-2'>
                 <button className="btn btn-sm btn-primary">Start Designing</button>
             </div>
-
         </div>
     );
 }

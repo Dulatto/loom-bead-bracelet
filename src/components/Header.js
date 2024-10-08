@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 import '../styles/header.css';
 
 function Header() {
@@ -13,8 +15,8 @@ function Header() {
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/faq">FAQ</Link></li>
-                    <li><Link to="/cart">Cart</Link></li>
-                    <li><Link to="/profile">Profile</Link></li>
+                    <li><Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} /> </Link></li>
+                    <li><Link to="/profile"><FontAwesomeIcon icon={faUser} /> </Link></li>
                 </ul>
             </nav>
         </header>

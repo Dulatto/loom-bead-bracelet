@@ -1,0 +1,27 @@
+.header {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header li {
+    margin: 0 15px;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.header a:hover {
+    color: #555;
+}

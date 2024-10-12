@@ -58,3 +58,8 @@ body {
     padding: 1rem; /* Внутренние отступы для футера */
     text-align: center; /* Центрировать текст */
 }
+
+a {
+    color: #000;
+    text-decoration: none;
+}

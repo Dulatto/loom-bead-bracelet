@@ -52,64 +52,66 @@ function BraceletDesigner() {
     const beadHeight = (1 / beadsPerCmVertical) * scaleFactor; // height of each bead (scaled)
 
     return (
-        <div className="bracelet-designer-container row">
-            {/* Controls Section */}
-            <div className="col-md-3">
-                <div className="controls">
-                    <h3>Settings</h3>
-                    <label>
-                        Width (cm):
-                        <input
-                            type="number"
-                            value={gridWidth}
-                            onChange={(e) => setGridWidth(Math.max(1, Number(e.target.value)))} // Update width in cm
-                        />
-                    </label>
-                    <label>
-                        Length (cm):
-                        <input
-                            type="number"
-                            value={gridLength}
-                            onChange={(e) => setGridLength(Math.max(1, Number(e.target.value)))} // Update length in cm
-                        />
-                    </label>
-
-                    <h3>Color Palette</h3>
-                    <div className="palette">
-                        {colors.map((color) => (
-                            <div
-                                key={color}
-                                className={`palette-color ${selectedColor === color ? 'selected' : ''}`}
-                                style={{ backgroundColor: color }}
-                                onClick={() => handleColorSelect(color)}
+        <div className="container">
+            <div className="bracelet-designer-container row">
+                {/* Controls Section */}
+                <div className="col-md-3">
+                    <div className="controls">
+                        <h3>Settings</h3>
+                        <label>
+                            Width (cm):
+                            <input
+                                type="number"
+                                value={gridWidth}
+                                onChange={(e) => setGridWidth(Math.max(1, Number(e.target.value)))} // Update width in cm
                             />
-                        ))}
+                        </label>
+                        <label>
+                            Length (cm):
+                            <input
+                                type="number"
+                                value={gridLength}
+                                onChange={(e) => setGridLength(Math.max(1, Number(e.target.value)))} // Update length in cm
+                            />
+                        </label>
+
+                        <h3>Color Palette</h3>
+                        <div className="palette">
+                            {colors.map((color) => (
+                                <div
+                                    key={color}
+                                    className={`palette-color ${selectedColor === color ? 'selected' : ''}`}
+                                    style={{ backgroundColor: color }}
+                                    onClick={() => handleColorSelect(color)}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Grid Section */}
-            <div className="grid-container col-md-9">
-                <h3>Design Your Bracelet</h3>
-                <Stage width={gridWidth * scaleFactor} height={gridLength * scaleFactor}>
-                    <Layer>
-                        {grid.map((row, rowIndex) =>
-                            row.map((color, colIndex) => (
-                                <Rect
-                                    key={`${rowIndex}-${colIndex}`}
-                                    x={colIndex * beadWidth}
-                                    y={rowIndex * beadHeight}
-                                    width={beadWidth}
-                                    height={beadHeight}
-                                    fill={color}
-                                    stroke="black"
-                                    strokeWidth={1}
-                                    onClick={() => handleCellClick(rowIndex, colIndex)}
-                                />
-                            ))
-                        )}
-                    </Layer>
-                </Stage>
+                {/* Grid Section */}
+                <div className="grid-container col-md-9">
+                    <h3>Design Your Bracelet</h3>
+                    <Stage width={gridWidth * scaleFactor} height={gridLength * scaleFactor}>
+                        <Layer>
+                            {grid.map((row, rowIndex) =>
+                                row.map((color, colIndex) => (
+                                    <Rect
+                                        key={`${rowIndex}-${colIndex}`}
+                                        x={colIndex * beadWidth}
+                                        y={rowIndex * beadHeight}
+                                        width={beadWidth}
+                                        height={beadHeight}
+                                        fill={color}
+                                        stroke="black"
+                                        strokeWidth={1}
+                                        onClick={() => handleCellClick(rowIndex, colIndex)}
+                                    />
+                                ))
+                            )}
+                        </Layer>
+                    </Stage>
+                </div>
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ function Header() {
 
                     {/* Центрированные ссылки */}
                     <div className="d-flex flex-grow-1 justify-content-center">
-                        <li><Link to="/designer">Create Bracelet</Link></li>
+                        <li><Link to="/designer"><button className='btn btn-dark mt-0'>Create Bracelet</button></Link></li>
                         <li><Link to="/catalog">Catalog</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/contact">Contact</Link></li>

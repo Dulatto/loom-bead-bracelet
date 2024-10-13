@@ -1,22 +1,19 @@
 import React from 'react';
 import '../styles/contact.css';
-import contactImage from '../assets/for_contact.jpeg';// Ensure you have styles for this page
+import contactImage from '../assets/for_contact.jpg';// Ensure you have styles for this page
 
 function Contact() {
     return (
-        <div className="container">
+        <div className="container contact">
             <div className='row'>
                 <div className='col-12 text-start'>
                     <p >If you have any questions, suggestions, or comments, feel free to reach out to us. We are always happy to help!</p>
 
                 </div>
-                <div className='col-4 contact-info'>
+                <div className='col-5 contact-info'>
                     <img src={contactImage} alt="Contact" className="img-fluid" />
-
                 </div>
-
-                <div className="col-8 feedback-form">
-
+                <div className="col-7 feedback-form">
                     <form>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Name</label>
@@ -33,11 +30,7 @@ function Contact() {
                         <button type="submit" className="btn btn-outline-primary">Send</button>
                     </form>
                 </div>
-
-
-
                 <div className="social-media">
-
                     <p>Stay connected on social media:</p>
                     <p>
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook me-2"></i></a>

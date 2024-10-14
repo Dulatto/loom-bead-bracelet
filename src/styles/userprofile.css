@@ -1,0 +1,33 @@
+/* user-account.css */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs div {
+    width: 32%;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabs div:hover {
+    background-color: #dee2e6;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}

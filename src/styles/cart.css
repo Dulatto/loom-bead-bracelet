@@ -1,0 +1,55 @@
+/* cart.css */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.order-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bracelet-preview {
+    width: 45%;
+}
+
+.order-details {
+    width: 45%;
+}
+
+.order-details input,
+.order-details textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.modify-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.price {
+    font-size: 1.5rem;
+    text-align: right;
+}

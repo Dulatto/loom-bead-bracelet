@@ -1,0 +1,25 @@
+/* about.css */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.team-photo {
+    width: 35%;
+}
+
+.team-photo img {
+    width: 100%;
+    border-radius: 10px;
+}

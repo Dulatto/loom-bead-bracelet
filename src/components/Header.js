@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import '../styles/header.css';
 
 function Header() {
@@ -14,7 +13,7 @@ function Header() {
                     </li>
 
                     {/* Центрированные ссылки */}
-                    <div className="d-flex flex-grow-1 justify-content-center">
+                    <div className="d-flex me-5">
                         <li><Link to="/designer"><button className='btn btn-dark mt-0'>Create Bracelet</button></Link></li>
                         <li><Link to="/catalog">Catalog</Link></li>
                         <li><Link to="/about">About</Link></li>
@@ -24,7 +23,7 @@ function Header() {
 
                     {/* Правые элементы */}
                     <div className="d-flex">
-                        <li className="ms-auto"><Link to="/cart"><i className="bi bi-cart"></i></Link></li>
+                        <li className="me-2"><Link to="/cart"><i className="bi bi-cart"></i></Link></li>
                         <li><Link to="/profile"><i className="bi bi-person"></i></Link></li>
                     </div>
                 </ul>

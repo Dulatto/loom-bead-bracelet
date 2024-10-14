@@ -3,7 +3,7 @@ import { Stage, Layer, Rect } from 'react-konva';
 import '../styles/braceletDesigner.css';
 
 // Color palette
-const colors = ['#FF5733', '#FF8D33', '#FFBD33', '#FFC300', '#FFD633', '#FFE933', '#DAF7A6', '#A6FF33', '#33FF57', '#33FFBD', '#33D1FF', '#33A6FF', '#335EFF', '#5733FF', '#8D33FF', '#FFFFFF', '#000000', '#B0B0B0', '#808080', '#40E0D0'];
+const colors = ['#FF5733', '#FF8D33', '#FFBD33', '#FFC300', '#FFD633', '#FFE933', '#DAF7A6', '#A6FF33', '#33FF57', '#33FFBD', '#33D1FF', '#33A6FF', '#335EFF', '#5733FF', '#8D33FF', '#FFFFFF', '#000000', '#B0B0B0', '#808080', '#40E0D0', '#FFD700', '#C0C0C0'];
 
 const beadsPerCmHorizontal = 5; // 5 beads per cm horizontally
 const beadsPerCmVertical = 4; // 4 beads per cm vertically

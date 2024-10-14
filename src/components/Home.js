@@ -19,18 +19,21 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className='row'>
-                <div className='col-12'>
-                    <h3>Create Your Custom Bracelet in 3 Easy Steps</h3>
-                    <p>Step 1: Choose Bracelet Size</p>
+            <div className='row mt-3'>
+                <h4 className=''>Create Your Custom Bracelet in 3 Easy Steps</h4>
+                <div className='col-3'></div>
+                <div className='col-6 text-start mx-5'>
+
+                    <h5><i class="bi bi-1-circle-fill"></i>: Choose Bracelet Size</h5>
                     <p>Select the desired length and width of your bracelet. Whether you want something delicate or bold, the choice is yours!</p>
 
-                    <p>Step 2: Design Your Pattern</p>
+                    <h5><i class="bi bi-2-circle-fill"></i>: Design Your Pattern</h5>
                     <p>Use our interactive grid to customize your bracelet. Select from a wide variety of bead colors and arrange them into your unique pattern.</p>
 
-                    <p>Step 3: Place Your Order</p>
+                    <h5><i class="bi bi-3-circle-fill"></i>: Place Your Order</h5>
                     <p>Once you're satisfied with your design, place your order. Our expert team will craft your bracelet and ship it to you!</p>
                 </div>
+                <div className='col-3'></div>
             </div>
         </div>
     );

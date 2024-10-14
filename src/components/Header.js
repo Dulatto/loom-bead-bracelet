@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/header.css';
 
 function Header() {
+
+    const location = useLocation();
+
     return (
         <header className="header">
             <nav>
@@ -14,11 +17,11 @@ function Header() {
 
                     {/* Центрированные ссылки */}
                     <div className="d-flex me-5">
-                        <li><Link to="/designer"><button className='btn btn-dark mt-0'>Create Bracelet</button></Link></li>
-                        <li><Link to="/catalog">Catalog</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/faq">FAQ</Link></li>
+                        <li><Link to="/designer" className={location.pathname === '/designer' ? 'active' : ''}>Create Bracelet</Link></li>
+                        <li><Link to="/catalog" className={location.pathname === '/catalog' ? 'active' : ''}>Catalog</Link></li>
+                        <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
+                        <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
+                        <li><Link to="/faq" className={location.pathname === '/faq' ? 'active' : ''}>FAQ</Link></li>
                     </div>
 
                     {/* Правые элементы */}

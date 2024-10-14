@@ -21,15 +21,39 @@
 }
 
 .header a {
+    position: relative; /* Для позиционирования псевдоэлемента */
     text-decoration: none;
     color: black;
     font-size: 1.1rem;
+    padding-bottom: 5px; /* Добавляем отступ снизу */
+    transition: color 0.3s ease; /* Анимация изменения цвета */
 }
 
-.header a:hover {
+.header a:hover,
+.header a.active {
     color: #555;
 }
 
 body {
     padding-top: 60px; /* Чтобы основной контент не был перекрыт хедером */
+}
+.header a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Высота полоски */
+    background-color: #000; /* Цвет полоски */
+    transform: scaleX(0); /* Изначально полоска скрыта */
+    transform-origin: right; /* Начало анимации справа */
+    transition: transform 0.3s ease; /* Анимация */
+}
+
+.header a:hover::after,
+.header a.active::after {
+    transform: scaleX(
+        1
+    ); /* Показываем полоску при наведении и активном элементе */
+    transform-origin: left; /* Анимация разворачивается слева направо */
 }

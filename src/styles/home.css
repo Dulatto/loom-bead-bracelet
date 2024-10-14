@@ -1,0 +1,43 @@
+.home-container {
+    position: relative;
+    text-align: center;
+}
+
+.home-image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%; /* Расположение по центру изображения */
+    left: 50%; /* Расположение по центру изображения */
+    transform: translate(-50%, -50%); /* Сдвиг для точного центрирования */
+    color: white; /* Цвет текста */
+    text-align: center;
+}
+
+.overlay-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для текста, чтобы сделать его более читаемым */
+}
+
+.overlay-content button {
+    font-size: 1rem;
+}
+.overlay-content .btn:hover {
+    background-color: #16a9b8 !important;
+    border-color: #16a9b8 !important;
+}
+.overlay-content .btn-primary {
+    --bs-btn-color: #fff !important;
+    --bs-btn-border-color: #16a9b8 !important;
+    --bs-btn-bg: #16a9b8 !important;
+}
+
+.second-button-style .btn-primary {
+    --bs-btn-color: #fff !important;
+    --bs-btn-border-color: #e1af71 !important;
+    --bs-btn-bg: #e1af71 !important;
+}

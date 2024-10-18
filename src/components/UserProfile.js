@@ -5,7 +5,7 @@ function UserProfile() {
     return (
         <div className='container'>
             <div class="section">
-                <h1>User Account</h1>
+                <h2>User Account</h2>
                 <div class="tabs">
                     <div class="tab" onclick="showTab('orders')">Order History</div>
                     <div class="tab" onclick="showTab('saved')">Saved Patterns</div>

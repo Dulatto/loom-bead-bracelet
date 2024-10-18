@@ -5,7 +5,7 @@ import homeImage from '../assets/home (1).jpg';
 
 function Home() {
     return (
-        <div className="home-container">
+        <div className="container">
             <img src={homeImage} alt="Contact" className="img-fluid home-image" />
             <div className="overlay-content">
                 <h1>Create your dream bracelet with custom designs</h1>

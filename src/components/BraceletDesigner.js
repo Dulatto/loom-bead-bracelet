@@ -53,6 +53,7 @@ function BraceletDesigner() {
 
     return (
         <div className="container">
+            <h2>Design Your Bracelet</h2>
             <div className="bracelet-designer-container row">
                 {/* Controls Section */}
                 <div className="col-md-3">
@@ -91,7 +92,7 @@ function BraceletDesigner() {
 
                 {/* Grid Section */}
                 <div className="grid-container col-md-9">
-                    <h3>Design Your Bracelet</h3>
+
                     <Stage width={gridWidth * scaleFactor} height={gridLength * scaleFactor}>
                         <Layer>
                             {grid.map((row, rowIndex) =>

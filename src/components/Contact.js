@@ -6,6 +6,7 @@ function Contact() {
     return (
         <div className="container contact">
             <div className='row'>
+                <h2>Contact us</h2>
                 <div className='col-12 text-start'>
                     <p >If you have any questions, suggestions, or comments, feel free to reach out to us. We are always happy to help!</p>
 

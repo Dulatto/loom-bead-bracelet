@@ -14,6 +14,7 @@ function BraceletDesigner() {
     const [gridWidth, setGridWidth] = useState(2); // Width of the grid in cm
     const [gridLength, setGridLength] = useState(6); // Length of the grid in cm
     const [grid, setGrid] = useState([]); // Grid state to store bead colors
+    const [savedPatterns, setSavedPatterns] = useState([]); // State to store saved patterns
 
     // Helper function to generate a grid based on width and length in cm
     function generateGrid(widthCm, lengthCm) {
@@ -45,6 +46,17 @@ function BraceletDesigner() {
             );
             setGrid(newGrid); // Update the grid state with the new color
         }
+    };
+
+    // Save the current pattern
+    const handleSavePattern = () => {
+        setSavedPatterns([...savedPatterns, grid]); // Add the current grid to the saved patterns state
+        alert('Pattern saved successfully!');
+    };
+
+    // Load a saved pattern
+    const handleLoadPattern = (pattern) => {
+        setGrid(pattern); // Load the selected pattern into the grid
     };
 
     // Bead dimensions
@@ -87,12 +99,13 @@ function BraceletDesigner() {
                                 />
                             ))}
                         </div>
+
+
                     </div>
                 </div>
 
                 {/* Grid Section */}
-                <div className="grid-container col-md-9">
-
+                <div className="grid-container col-md-7">
                     <Stage width={gridWidth * scaleFactor} height={gridLength * scaleFactor}>
                         <Layer>
                             {grid.map((row, rowIndex) =>
@@ -112,6 +125,24 @@ function BraceletDesigner() {
                             )}
                         </Layer>
                     </Stage>
+                </div>
+
+                <div className='col-md-2'>
+                    {/* Buttons */}
+                    <div className="actions">
+                        <button className="btn btn-primary" onClick={handleSavePattern}>Save Pattern</button>
+                        <button className="btn btn-secondary" onClick={() => alert('Resetting design...')}>Reset</button>
+                    </div>
+
+                    <h5>Saved Patterns</h5>
+                    {/* Display saved patterns */}
+                    <ul>
+                        {savedPatterns.map((pattern, index) => (
+                            <li key={index}>
+                                <button onClick={() => handleLoadPattern(pattern)}>Load Pattern {index + 1}</button>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>

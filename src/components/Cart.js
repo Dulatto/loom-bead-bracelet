@@ -6,17 +6,17 @@ function Cart() {
         <div className="container">
 
             <div className="section">
-                <h1>Order Your Bracelet</h1>
+                <h2>Order Your Bracelet</h2>
                 <div className="order-section">
                     <div className="bracelet-preview">
-                        <h2>Confirm Your Design</h2>
+                        <h5>Confirm Your Design</h5>
                         <p><strong>Size:</strong> Medium</p>
                         <p><strong>Colors:</strong> Red, Blue, White</p>
                         <p><strong>Materials:</strong> Nylon, Glass Beads</p>
                         {/* <img src="bracelet-design.jpg" alt="Bracelet Preview" style="width: 100%; border-radius: 10px;" /> */}
                     </div>
                     <div className="order-details">
-                        <h2>Delivery Details</h2>
+                        <h5>Delivery Details</h5>
                         <input type="text" placeholder="Your Name" required />
                         <input type="text" placeholder="Address" required />
                         <input type="text" placeholder="Phone Number" required />

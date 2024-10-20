@@ -58,7 +58,7 @@ function BraceletDesigner() {
                 {/* Controls Section */}
                 <div className="col-md-3">
                     <div className="controls">
-                        <h3>Settings</h3>
+                        <h5>Settings</h5>
                         <label>
                             Width (cm):
                             <input
@@ -76,7 +76,7 @@ function BraceletDesigner() {
                             />
                         </label>
 
-                        <h3>Color Palette</h3>
+                        <h5>Color Palette</h5>
                         <div className="palette">
                             {colors.map((color) => (
                                 <div

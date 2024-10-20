@@ -11,7 +11,7 @@ const scaleFactor = 90; // 90px per cm for bead size scaling
 
 function BraceletDesigner() {
     const [selectedColor, setSelectedColor] = useState(null); // Current color selected by the user
-    const [gridWidth, setGridWidth] = useState(2); // Width of the grid in cm
+    const [gridWidth, setGridWidth] = useState(1); // Width of the grid in cm
     const [gridLength, setGridLength] = useState(6); // Length of the grid in cm
     const [grid, setGrid] = useState([]); // Grid state to store bead colors
     const [savedPatterns, setSavedPatterns] = useState([]); // State to store saved patterns
@@ -50,8 +50,15 @@ function BraceletDesigner() {
 
     // Save the current pattern
     const handleSavePattern = () => {
+
         setSavedPatterns([...savedPatterns, grid]); // Add the current grid to the saved patterns state
-        alert('Pattern saved successfully!');
+        if (savedPatterns.length > 0) {
+            console.log('Pattern saved successfully!', savedPatterns);
+        } else {
+            console.log('There is nothing to save');
+
+        }
+
     };
 
     // Load a saved pattern

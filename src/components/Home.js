@@ -24,13 +24,13 @@ function Home() {
                 <div className='col-3'></div>
                 <div className='col-6 text-start mx-5'>
 
-                    <h5><i class="bi bi-1-circle-fill"></i>: Choose Bracelet Size</h5>
+                    <h5><i className="bi bi-1-circle-fill"></i>: Choose Bracelet Size</h5>
                     <p>Select the desired length and width of your bracelet. Whether you want something delicate or bold, the choice is yours!</p>
 
-                    <h5><i class="bi bi-2-circle-fill"></i>: Design Your Pattern</h5>
+                    <h5><i className="bi bi-2-circle-fill"></i>: Design Your Pattern</h5>
                     <p>Use our interactive grid to customize your bracelet. Select from a wide variety of bead colors and arrange them into your unique pattern.</p>
 
-                    <h5><i class="bi bi-3-circle-fill"></i>: Place Your Order</h5>
+                    <h5><i className="bi bi-3-circle-fill"></i>: Place Your Order</h5>
                     <p>Once you're satisfied with your design, place your order. Our expert team will craft your bracelet and ship it to you!</p>
                 </div>
                 <div className='col-3'></div>

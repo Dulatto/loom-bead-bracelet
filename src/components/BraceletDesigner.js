@@ -66,6 +66,17 @@ function BraceletDesigner() {
         setGrid(pattern); // Load the selected pattern into the grid
     };
 
+    const handleReset = () => {
+        // Reset the grid to the initial empty state
+        setGridWidth(1)
+        setGridLength(6)
+        setGrid(generateGrid(gridWidth, gridLength));
+
+        // Optionally, clear saved patterns (if needed)
+        setSavedPatterns([]);
+    };
+
+
     // Bead dimensions
     const beadWidth = (1 / beadsPerCmHorizontal) * scaleFactor; // width of each bead (scaled)
     const beadHeight = (1 / beadsPerCmVertical) * scaleFactor; // height of each bead (scaled)
@@ -138,7 +149,7 @@ function BraceletDesigner() {
                     {/* Buttons */}
                     <div className="actions">
                         <button className="btn btn-primary" onClick={handleSavePattern}>Save Pattern</button>
-                        <button className="btn btn-secondary" onClick={() => alert('Resetting design...')}>Reset</button>
+                        <button className="btn btn-secondary" onClick={handleReset}>Reset</button>
                     </div>
 
                     <h5>Saved Patterns</h5>

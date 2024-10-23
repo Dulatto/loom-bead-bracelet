@@ -19,6 +19,22 @@ const catalogItems = [
         imageUrl: 'path/to/image2.jpg',
         rating: 4.0,
     },
+    {
+        id: 3,
+        name: 'Ocean Wave Bracelet 2',
+        price: 29.99,
+        colors: ['#33A6FF', '#335EFF', '#33D1FF'],
+        imageUrl: 'path/to/image2.jpg',
+        rating: 4.0,
+    },
+    {
+        id: 4,
+        name: 'Ocean Wave Bracelet 3',
+        price: 39.99,
+        colors: ['#33A6FF', '#335EFF', '#33D1FF'],
+        imageUrl: 'path/to/image2.jpg',
+        rating: 4.0,
+    },
     // Add more items here
 ];
 
@@ -83,9 +99,9 @@ function Catalog() {
                         </div>
 
                         {/* Action Buttons */}
-                        <button className="btn btn-primary">View Details</button>
+                        <button className="btn btn-primary btn-sm">View Details</button>
                         <button
-                            className="btn btn-buy"
+                            className="btn btn-buy btn-sm"
                             onClick={() => handleBuy(item.id)}
                         >
                             Buy Now

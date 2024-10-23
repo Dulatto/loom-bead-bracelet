@@ -148,8 +148,8 @@ function BraceletDesigner() {
                 <div className='col-md-2'>
                     {/* Buttons */}
                     <div className="actions">
-                        <button className="btn btn-primary" onClick={handleSavePattern}>Save Pattern</button>
-                        <button className="btn btn-secondary" onClick={handleReset}>Reset</button>
+                        <button className="btn btn-primary btn-sm" onClick={handleSavePattern}>Save Pattern</button>
+                        <button className="btn btn-secondary btn-sm" onClick={handleReset}>Reset</button>
                     </div>
 
                     <h5>Saved Patterns</h5>

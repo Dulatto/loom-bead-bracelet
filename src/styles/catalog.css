@@ -2,6 +2,9 @@
     padding: 20px;
     text-align: center;
 }
+.catalog-container h2 {
+    text-align: left;
+}
 
 .search-bar input {
     padding: 10px;
@@ -38,12 +41,12 @@
 }
 
 .item-price {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #333;
 }
 
 .item-rating {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ffcc00; /* Yellow stars for rating */
     margin: 10px 0;
 }

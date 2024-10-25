@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/catalog.css';
 
 // Sample data for catalog items (bracelets)
-const catalogItems = [
+export const catalogItems = [
     {
         id: 1,
         name: 'Sunset Bracelet',
@@ -42,19 +43,15 @@ function Catalog() {
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredItems, setFilteredItems] = useState(catalogItems);
 
-    // Handle search input
     const handleSearchChange = (e) => {
         const query = e.target.value.toLowerCase();
         setSearchQuery(query);
-
-        // Filter catalog items based on the search query
         const filtered = catalogItems.filter((item) =>
             item.name.toLowerCase().includes(query)
         );
         setFilteredItems(filtered);
     };
 
-    // Handle the purchase button click
     const handleBuy = (itemId) => {
         alert(`Item with ID ${itemId} added to cart!`);
     };
@@ -63,7 +60,6 @@ function Catalog() {
         <div className="catalog-container">
             <h2>Catalog</h2>
 
-            {/* Search Bar */}
             <div className="search-bar">
                 <input
                     type="text"
@@ -73,21 +69,16 @@ function Catalog() {
                 />
             </div>
 
-            {/* Catalog Items */}
             <div className="catalog-items">
                 {filteredItems.map((item) => (
                     <div key={item.id} className="catalog-item">
                         <img src={item.imageUrl} alt={item.name} className="item-image" />
                         <h5>{item.name}</h5>
                         <p className="item-price">${item.price.toFixed(2)}</p>
-
-                        {/* Rating */}
                         <div className="item-rating">
-                            {'⭐'.repeat(Math.floor(item.rating))} {/* Display stars */}
-                            {item.rating % 1 !== 0 ? '✩' : ''} {/* Half star */}
+                            {'⭐'.repeat(Math.floor(item.rating))}
+                            {item.rating % 1 !== 0 ? '✩' : ''}
                         </div>
-
-                        {/* Color Swatches */}
                         <div className="item-colors">
                             {item.colors.map((color, idx) => (
                                 <div
@@ -97,9 +88,9 @@ function Catalog() {
                                 />
                             ))}
                         </div>
-
-                        {/* Action Buttons */}
-                        <button className="btn btn-primary btn-sm">View Details</button>
+                        <Link to={`/bracelet/${item.id}`}>
+                            <button className="btn btn-primary btn-sm">View Details</button>
+                        </Link>
                         <button
                             className="btn btn-buy btn-sm"
                             onClick={() => handleBuy(item.id)}

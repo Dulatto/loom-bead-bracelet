@@ -10,6 +10,7 @@ import Cart from './components/Cart';
 import UserProfile from './components/UserProfile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BraceletDetails from './components/BraceletDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './styles/app.css';
@@ -30,6 +31,7 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/profile" element={<UserProfile />} />
+            <Route path="/bracelet/:id" element={<BraceletDetails />} /> {/* Dynamic route */}
           </Routes>
         </div>
         <Footer />
